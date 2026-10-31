@@ -101,6 +101,74 @@
       </section>
 
     </div>
+<p class="section-description">
+    Історія комітів, гілки та результати виконання Git-команд.
+  </p>
+
+  <div class="git-tabs">
+    <input type="radio" name="git-tab" id="tab-status" checked>
+    <input type="radio" name="git-tab" id="tab-branch">
+    <input type="radio" name="git-tab" id="tab-log">
+    <input type="radio" name="git-tab" id="tab-merge">
+
+    <div class="tab-labels">
+      <label for="tab-status">Git Status</label>
+      <label for="tab-branch">Git Branch</label>
+      <label for="tab-log">Git Log</label>
+      <label for="tab-merge">Merge History</label>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="terminal-title">git-terminal</span>
+      </div>
+
+      <div class="terminal-body">
+        <!-- Сюди вставте результати виконання git status -->
+        <pre class="tab-content status"><code>$ git status
+arina@AcerNitroV15 MINGW64 ~/my-first-website (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+
+        <!-- Сюди результати git branch -a -->
+        <pre class="tab-content branch"><code>$ git branch -a
+arina@AcerNitroV15 MINGW64 ~/my-first-website (main)
+$ git branch -a
+  feature/about
+- main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/feature/about
+  remotes/origin/main</code></pre>
+
+        <!-- Сюди результати git log --oneline -->
+        <pre class="tab-content log"><code>$ git log --oneline
+arina@AcerNitroV15 MINGW64 ~/my-first-website (main)
+$ git log --oneline
+6b6a0e5 (HEAD -> main, origin/main, origin/feature/about, origin/HEAD, feature/about) Merge branch 'main' into feature/about and resolve conflict
+727eb20 Change page heading
+412beca Update main heading
+c1df45a Update hobbies list
+3ed0d1f Add hobbies section
+cba5030 Add initial website</code></pre>
+
+        <!-- Сюди результати git log --merges -->
+        <pre class="tab-content merge"><code>$ git log --merges
+arina@AcerNitroV15 MINGW64 ~/my-first-website (main)
+$ git log --merges
+arina@AcerNitroV15 MINGW64 ~/my-first-website (main)D -> main, origin/main, origin/feature/about, or$ ^C/HEAD, feature/about)
+Merge: 727eb20 412beca</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
 
     <footer class="footer">
       <p>Made with Git & GitHub Pages</p>
